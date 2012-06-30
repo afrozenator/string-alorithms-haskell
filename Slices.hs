@@ -1,3 +1,5 @@
+-- Author : Afroz Mohiuddin
+
 module Slices(subString, fromPosnToEnd, fromStartToPosn) where
 
 -- Substring of thisString, starting at posnStart and spanning len chars.
