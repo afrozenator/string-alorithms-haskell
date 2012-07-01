@@ -12,7 +12,7 @@ insertValue arrayTillNow value = let oldBounds = bounds arrayTillNow
                                  in array (fst oldBounds, snd oldBounds + 1) (assocs arrayTillNow ++ [(snd oldBounds + 1, value)]) 
 
 changeElementAt :: Ix i => i -> e -> Array i e -> Array i e
-changeElementAt key value assocArray = array (bounds assocArray) (replaceKeyValue key value (assocs assocArray)) 
+changeElementAt key value assocArray = assocArray // [(key, value)]
 
 -- Helper Functions --
 
