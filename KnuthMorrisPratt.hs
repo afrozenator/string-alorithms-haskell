@@ -1,5 +1,7 @@
 -- Author : Afroz Mohiuddin
 
+module KnuthMorrisPratt (knuthMorrisPratt) where
+
 -- Knuth Morris Pratt Algorithm Implementation --
 
 import ArrayUtils(changeElementAt, insertValue, stringToArray)
@@ -40,5 +42,5 @@ kmpSearchHelper needle haystack posnHaystack posnNeedle prefixArray listMatches
         haystackChar = haystack ! (posnHaystack + posnNeedle)
         prefPosn = prefixArray ! (posnNeedle - 1)
 
-kmpSearch :: String -> String -> [Int]
-kmpSearch needle haystack = kmpSearchHelper (stringToArray needle) (stringToArray haystack) 0 0 (prefixPosition needle) []
+knuthMorrisPratt :: String -> String -> [Int]
+knuthMorrisPratt needle haystack = kmpSearchHelper (stringToArray needle) (stringToArray haystack) 0 0 (prefixPosition needle) []
